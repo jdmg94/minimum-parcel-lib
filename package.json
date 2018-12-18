@@ -1,0 +1,30 @@
+{
+  "name": "minimum-parcel-lib",
+  "version": "1.0.0",
+  "description": "A boilerplate for react libraries bundled with parcel",
+  "main": "lib/index.js",
+  "repository": "https://github.com/jdmg94/minimum-parcel-lib.git",
+  "author": "José Muñoz <jdmg93@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "clean:demo": "rm -rf ./example/dist",
+    "start": "parcel watch ./lib/index.jsx --out-dir ./dist",
+    "start:demo": "parcel ./example/src/index.html --out-dir ./example/dist",
+    "build": "parcel build ./lib/index.jsx --global minimum-parcel-lib",
+    "build:demo": "parcel build ./example/src/index.html --out-dir ./example/dist --public-url ./",
+    "deploy": "gh-pages -d ./example/dist",
+    "dev": "yarn start && yarn start:demo",
+    "sourcemap": "source-map-explorer --html ./dist/index.js ./dist/index.map > source-map.html"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "parcel-bundler": "^1.11.0",
+    "source-map-explorer": "^1.6.0"
+  },
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
