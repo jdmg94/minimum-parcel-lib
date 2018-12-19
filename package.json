@@ -2,7 +2,7 @@
   "name": "minimum-parcel-lib",
   "version": "1.0.0",
   "description": "A boilerplate for react libraries bundled with parcel",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/jdmg94/minimum-parcel-lib.git",
   "author": "José Muñoz <jdmg93@gmail.com>",
   "license": "MIT",
