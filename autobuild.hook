@@ -1,0 +1,15 @@
+#
+# Automatic clean and build for dist assets
+#
+# Add this to your git hooks under .git/hooks/pre-commit
+#
+
+echo "Cleaning dist folders...";
+yarn clean && yarn clean:demo;
+echo "Building lib and demo...";
+yarn build && yarn build:demo;
+echo "Generating source map...";
+yarn sourcemap
+echo "Adding new assets to source control...";
+git add dist examples/dist source-map.html;
+echo "done!";

@@ -1,6 +1,6 @@
 {
   "name": "minimum-parcel-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A boilerplate for react libraries bundled with parcel",
   "main": "dist/index.js",
   "repository": "https://github.com/jdmg94/minimum-parcel-lib.git",
@@ -14,8 +14,9 @@
     "start:demo": "parcel ./example/src/index.html --out-dir ./example/dist",
     "build": "parcel build ./lib/index.jsx --global minimum-parcel-lib",
     "build:demo": "parcel build ./example/src/index.html --out-dir ./example/dist --public-url ./",
+    "autobuild:on": "cp autobuild.hook .git/hooks/pre-commit",
+    "autobuild:off": "rm .git/hooks/pre-commit",
     "deploy": "gh-pages -d ./example/dist",
-    "dev": "yarn start && yarn start:demo",
     "sourcemap": "source-map-explorer --html ./dist/index.js ./dist/index.map > source-map.html"
   },
   "devDependencies": {
@@ -24,7 +25,8 @@
     "source-map-explorer": "^1.6.0"
   },
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "@babel/runtime": "^7.2.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   }
 }
