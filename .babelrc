@@ -4,8 +4,10 @@
   ],
   "plugins": [
     "lodash",
+    "@babel/proposal-nullish-coalescing-operator",
+    "@babel/proposal-optional-chaining",
     "@babel/proposal-class-properties",
     "@babel/syntax-object-rest-spread",
-    "@babel/transform-runtime",
+    "@babel/transform-runtime"
   ]
 }

@@ -27,4 +27,4 @@ Finally, I've included an `autobuild.hook` file that can be used to clean, build
 - `sourcemap` generates an HTML representation of your source map
 - `deploy` deploys your demo site to github pages
 
-2018 Jose Muñoz
+2019 Jose Muñoz
